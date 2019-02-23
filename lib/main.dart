@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home 😻'),
     );
   }
 }
@@ -72,6 +72,47 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
+        child: Card(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Image.network(
+                'https://picsum.photos/250?random',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+              ),
+              const ListTile(
+                leading: Icon(Icons.album),
+                title: Text('The Enchanted Nightingale'),
+                subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+              ),
+              ButtonTheme.bar(
+                // make buttons use the appropriate styles for cards
+                child: ButtonBar(
+                  children: <Widget>[
+                    FlatButton(
+                      child: const Text('BUY TICKETS'),
+                      onPressed: () {/* ... */},
+                    ),
+                    FlatButton(
+                      child: const Text('LISTEN'),
+                      onPressed: () {/* ... */},
+                    ),
+                  ],
+                ),
+              ),
+              Text(
+                'You have pushed the button this many times:',
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.display1,
+              ),
+            ],
+          ),
+        ),
+      ),
+      /* body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -100,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ),
+      ), */
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

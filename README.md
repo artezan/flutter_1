@@ -10,6 +10,8 @@ despues de la instalacion Ir a ⚙️ seleccionar root
 
 abrir en nox/bin una terminal y esxribir `nox_adb.exe connect 127.0.0.1:62001` o `nox_adb.exe connect 127.0.0.1`
 
+Seleccionar el dispositivo en vscode
+
 En el proyecto de Flutter escribir `flutter run --enable-software-rendering`
 
 ## Getting Started
