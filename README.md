@@ -14,6 +14,8 @@ Seleccionar el dispositivo en vscode
 
 En el proyecto de Flutter escribir `flutter run --enable-software-rendering`
 
+-- para terminar el preceso `netstat -ano | findstr :<yourPortNumber>` y `taskkill /PID <typeyourPIDhere> /F`
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
